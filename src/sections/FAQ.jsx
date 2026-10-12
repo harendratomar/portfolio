@@ -26,7 +26,7 @@ export function FAQ() {
           />
         </MotionReveal>
 
-        <div className="mx-auto mt-12 max-w-3xl space-y-3.5">
+        <div className="mx-auto mt-8 sm:mt-10 max-w-3xl space-y-3.5">
           {faqs.map((faq, idx) => {
             const isOpen = openId === faq.id
             const answerId = `faq-answer-${faq.id}`

@@ -17,7 +17,7 @@ export function Process() {
           />
         </MotionReveal>
 
-        <div className="relative mt-14 sm:mt-18">
+        <div className="relative mt-8 sm:mt-12">
           {/* Central glowing vertical timeline line (hidden on mobile) */}
           <div
             aria-hidden="true"

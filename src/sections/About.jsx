@@ -29,7 +29,7 @@ export function About() {
           />
         </MotionReveal>
 
-        <div className="mt-12 grid gap-12 lg:grid-cols-12 lg:items-start">
+        <div className="mt-8 sm:mt-10 grid gap-8 lg:gap-10 lg:grid-cols-12 lg:items-start">
           {/* Bio + Avatar Column */}
           <div className="space-y-6 lg:col-span-7">
             <MotionReveal delay={0.1}>

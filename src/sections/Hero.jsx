@@ -8,7 +8,7 @@ import { site } from '../data/site.js'
 
 export function Hero() {
   return (
-    <Section className="relative overflow-hidden pt-8 pb-16 sm:pt-14 sm:pb-24 lg:pt-16 lg:pb-28">
+    <Section className="relative overflow-hidden pt-4 pb-8 sm:pt-8 sm:pb-10 lg:pt-10 lg:pb-12">
       <Container className="relative">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
           {/* Left Column: Headline and Pitch */}
@@ -38,7 +38,7 @@ export function Hero() {
               <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-lg lg:text-xl">
                 Specialising in <strong className="font-semibold text-ink">React Native</strong>,{' '}
                 <strong className="font-semibold text-ink">Next.js</strong>, and{' '}
-                <strong className="font-semibold text-ink">Agora RTC</strong> audio/video platforms. 
+                <strong className="font-semibold text-ink">Agora RTC</strong> audio/video platforms.
                 I turn rough concepts into polished, scalable software — from discovery to App Store launch.
               </p>
 
@@ -96,26 +96,6 @@ export function Hero() {
             </MotionReveal>
           </div>
         </div>
-
-        {/* Tech Stack Interactive Ribbon */}
-        <MotionReveal delay={0.25} className="mt-16 sm:mt-20 border-t border-line/60 pt-8">
-          <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 justify-between">
-            <p className="text-xs font-bold tracking-widest text-muted uppercase">
-              Core Tech Stack & Architectures
-            </p>
-            <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
-              {site.techStack.map((tech) => (
-                <span
-                  key={tech.slug}
-                  className="group inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface px-3 py-1.5 text-xs font-semibold text-ink transition-all hover:scale-105 hover:border-accent hover:text-accent hover:shadow-sm"
-                >
-                  <span className="size-1.5 rounded-full bg-accent/60 group-hover:bg-accent transition-colors" />
-                  {tech.label}
-                </span>
-              ))}
-            </div>
-          </div>
-        </MotionReveal>
       </Container>
     </Section>
   )

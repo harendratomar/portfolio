@@ -81,7 +81,7 @@ export function Services() {
           />
         </MotionReveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-8 sm:mt-10 grid gap-6 md:grid-cols-2">
           {enhancedServices.map((service, i) => {
             const Icon = service.icon
             return (

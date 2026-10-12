@@ -18,7 +18,7 @@ export function Testimonials() {
           />
         </MotionReveal>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+        <div className="mt-8 sm:mt-10 grid gap-6 sm:grid-cols-2">
           {testimonials.map((item, idx) => {
             const initials = item.name
               .split(' ')
