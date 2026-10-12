@@ -4,8 +4,8 @@ export function Card({ as: Tag = 'div', className, children, hover = true, ...pr
   return (
     <Tag
       className={cn(
-        'rounded-xl border border-line bg-surface p-6 shadow-card',
-        hover && 'transition-shadow hover:shadow-lg',
+        'rounded-2xl border border-line bg-surface/85 p-6 sm:p-7 shadow-card backdrop-blur-md',
+        hover && 'transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl',
         className,
       )}
       {...props}

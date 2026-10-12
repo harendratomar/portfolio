@@ -11,9 +11,16 @@ export function ThemeToggle({ className }) {
       onClick={toggleTheme}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
       aria-pressed={isDark}
-      className={className ?? 'inline-flex size-10 items-center justify-center rounded-lg text-ink hover:bg-accent-soft'}
+      className={
+        className ??
+        'inline-flex size-9 items-center justify-center rounded-full border border-line bg-surface-raised text-ink transition-all hover:border-accent hover:text-accent hover:scale-105 cursor-pointer shadow-sm'
+      }
     >
-      {isDark ? <Sun className="size-5" aria-hidden="true" /> : <Moon className="size-5" aria-hidden="true" />}
+      {isDark ? (
+        <Sun className="size-4 transition-transform duration-300 hover:rotate-45 text-amber-400" aria-hidden="true" />
+      ) : (
+        <Moon className="size-4 transition-transform duration-300 hover:-rotate-12 text-slate-700" aria-hidden="true" />
+      )}
     </button>
   )
 }
