@@ -110,11 +110,29 @@ export function Contact() {
         })
         if (!res.ok) throw new Error('Formspree submission failed')
       } else {
-        await new Promise((resolve) => setTimeout(resolve, 800))
-        console.info(
-          'Form submitted in preview mode (no EmailJS or Formspree keys configured):',
-          formData
-        )
+        // FormSubmit.co direct integration sending to site.email (buildwith06@gmail.com)
+        const targetEmail = site.email || 'buildwith06@gmail.com'
+        const res = await fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            'Project Scope': formData.projectType,
+            'Estimated Budget': formData.budget,
+            'Project Details': formData.message,
+            _subject: `New Project Inquiry from ${formData.name}`,
+            _template: 'table',
+            _captcha: 'false',
+          }),
+        })
+
+        if (!res.ok) {
+          throw new Error('Form submission could not be completed')
+        }
       }
 
       setStatus('success')
