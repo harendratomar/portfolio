@@ -16,7 +16,7 @@ export function SEO({
     description ||
     `${site.headline} Specialized in React, Next.js, Node.js, and React Native. Available for freelance projects worldwide.`
 
-  const siteUrl = 'https://yourname.dev' // Replace with real production domain
+  const siteUrl = site.url || 'https://portfolio-flax-seven-apzgdi7j3e.vercel.app'
   const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl
 
   return (

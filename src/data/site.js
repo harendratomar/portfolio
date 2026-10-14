@@ -4,6 +4,7 @@
 export const site = {
   name: 'Harendra Singh',
   shortName: 'HS',
+  url: 'https://portfolio-flax-seven-apzgdi7j3e.vercel.app',
   headline:
     'I build web and mobile apps for startups and small businesses, from idea to launch.',
   subtext:

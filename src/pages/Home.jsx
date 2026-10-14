@@ -22,7 +22,7 @@ export default function Home() {
       addressCountry: 'India',
       addressLocality: site.location,
     },
-    url: 'https://yourname.dev',
+    url: site.url || 'https://portfolio-flax-seven-apzgdi7j3e.vercel.app',
     sameAs: [site.social.linkedin, site.social.github, site.social.upwork],
     knowsAbout: site.techStack.map((t) => t.label),
   }

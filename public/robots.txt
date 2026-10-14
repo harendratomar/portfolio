@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yourname.dev/sitemap.xml
+Sitemap: https://portfolio-flax-seven-apzgdi7j3e.vercel.app/sitemap.xml
